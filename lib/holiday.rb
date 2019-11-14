@@ -77,6 +77,8 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holiday_bbq = []
  holiday_hash.each{|season,holiday|
+   holiday.each{|item| if item == "BBQ"
+   holiday_bbq.push(holiday)}
      if holiday.include?("BBQ")
        holiday_bbq.push(holiday)
      end}
